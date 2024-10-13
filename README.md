@@ -18,3 +18,12 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 - **Data de Plantio/ Data de Colheita** -  Viabiliza a noção temporal 
 - **Previsão Climática em Tempo Real** - Permite que o nosso app informe, com precisão, a previsão climática, de acordo com a localização do usuário em tempo real
 - **Diagramação Dos Tipos de Culturas** - Oferece, de modo simplificado, a organização conceitual, a textual e, sobretudo, a visual de todos as culturas cadastradas
+
+## 📦 Tecnologias
+
+<img src="https://img.shields.io/badge/Python-F46036?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Django-3C3744?style=for-the-badge&logo=django&logoColor=white"/>
+<img src="https://img.shields.io/badge/html5-F46036?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/javascript-3C3744?style=for-the-badge&logo=javascript&logoColor=white"/>
+<img src="https://img.shields.io/badge/css3-F46036?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/Microsoft_Azure-3C3744?style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
