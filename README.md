@@ -38,3 +38,20 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 <img src="https://img.shields.io/badge/YOUTUBE-F46036?style=for-the-badge&logo=youtube&logoColor=white"/>
 </a>
 <img src="https://img.shields.io/badge/Notion-3C3744?style=for-the-badge&logo=notion&logoColor=white"/>
+
+## 👥 Creditos
+
+[Davi Marques](https://github.com/davimqz) - dmo3@cesar.school
+
+[Gabriel Magalhães](https://github.com/gabrielmdev) - gmm@cesar.school
+
+[Raul Vila Nova](https://github.com/raulvnc) - rvnc@cesar.school
+
+[Rodrigo Torres](https://github.com/Rodrigotorres1) - rtgf@cesar.school
+
+[Kaike Campos](https://github.com/kaik-e) - kcma@cesar.school
+
+[Gustavo Aguiar](https://github.com/Gustaguiar02) - gmal@cesar.school
+
+[Davi Santiago](https://github.com/Davicas01) - dscpr@cesar.school
+
