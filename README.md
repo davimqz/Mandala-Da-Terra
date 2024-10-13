@@ -27,3 +27,14 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 <img src="https://img.shields.io/badge/javascript-3C3744?style=for-the-badge&logo=javascript&logoColor=white"/>
 <img src="https://img.shields.io/badge/css3-F46036?style=for-the-badge&logo=css3&logoColor=white"/>
 <img src="https://img.shields.io/badge/Microsoft_Azure-3C3744?style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
+
+##  🛠️ Ferramentas
+
+<a href="">
+<img src="https://img.shields.io/badge/Jira-F46036?style=for-the-badge&logo=Jira&logoColor=white"/>
+</a>
+<img src="https://img.shields.io/badge/figma-3C3744?style=for-the-badge&logo=figma&logoColor=white"/>
+<a href="">
+<img src="https://img.shields.io/badge/YOUTUBE-F46036?style=for-the-badge&logo=youtube&logoColor=white"/>
+</a>
+<img src="https://img.shields.io/badge/Notion-3C3744?style=for-the-badge&logo=notion&logoColor=white"/>
