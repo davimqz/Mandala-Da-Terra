@@ -16,6 +16,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# meu_projeto/settings.py
+
+AUTH_USER_MODEL = 'contas.User'  # Certifique-se de que isso está definido corretamente
+
 
 # Application definition
 
@@ -107,7 +111,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'accounts/static'),
+    os.path.join(BASE_DIR, 'contas/static'),
 ]
 
 # Default primary key field type
