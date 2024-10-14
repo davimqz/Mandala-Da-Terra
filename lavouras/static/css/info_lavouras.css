@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecalho {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.botao-voltar {
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.clima {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dados-clima {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.icone-clima {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.temperatura {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.descricao {
+    text-transform: capitalize; /* Primeira letra maiúscula */
+    font-size: 16px;
+}
+
+.informacoes-plantacao {
+    margin-bottom: 20px;
+}
+
+.cabecalho-plantacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imagem-plantacao {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.informacoes-datas {
+    margin-bottom: 20px;
+}
+
+.linha-datas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.coluna {
+    width: 45%;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.widget-calendario {
+    margin-top: 20px;
+}
+
+#calendario {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%; 
+}
