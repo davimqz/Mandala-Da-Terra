@@ -1,11 +1,16 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Página Inicial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Registro</title>
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
 </head>
 <body>
-    <h1>Bem-vindo à Página Inicial!</h1>
-    <a href="{% url 'login' %}">Sair</a>
+    <div class="container">
+        <h1>Bem-Vindo(a) ao Mandala da Terra!</h1>
+        <a href="{% url 'login' %}"><button class="botao">Login</button></a>
+        <a href="{% url 'cadastro' %}"><button class="botao">Cadastro</button></a>
+    </div>
 </body>
 </html>
