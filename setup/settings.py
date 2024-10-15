@@ -18,8 +18,6 @@ ALLOWED_HOSTS = []
 
 # meu_projeto/settings.py
 
-AUTH_USER_MODEL = 'contas.User'  # Certifique-se de que isso está definido corretamente
-
 
 # Application definition
 
@@ -30,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'contas',
+    'apps.contas',
+    'apps.plantacoes',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +47,7 @@ ROOT_URLCONF = 'setup.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,9 +109,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'contas/static'),
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
