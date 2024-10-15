@@ -8,3 +8,4 @@ def LoginView(request):
 
 def CadastroView(request):
     return render (request, 'cadastro.html')
+

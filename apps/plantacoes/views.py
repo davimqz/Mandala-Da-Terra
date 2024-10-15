@@ -8,3 +8,6 @@ def SafView(request):
 
 def HortaView(request):
     return render (request, 'horta.html')
+
+def AdicionarPlantacaoView(request):
+    return render (request, 'adicionar_plantacao.html')

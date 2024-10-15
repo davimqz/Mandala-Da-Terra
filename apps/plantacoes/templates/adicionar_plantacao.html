@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/adicionar_plantacao.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Qual área você deseja?</h2>
+        <div class="form">
+            <button class="botao">SAF</button>
+            <button class="botao">Horta</button>
+        </div>
+        
+        <div class="grid">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+        
+        <button class="add-botao">Adicionar plantação</button>
+    </div>
+</body>
+</html>
