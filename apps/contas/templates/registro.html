@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página de Registro</title>
     <link rel="stylesheet" href="{% static 'css/registro.css' %}">
 </head>
 <body>
     <div class="container">
-        <button class="botao">Login</button>
-        <button class="botao">Cadastro</button>
+        <form action="{% url 'login' %}">
+            <button class="botao">Login</button>
+        </form>
+        <form action="{% url 'cadastro' %}">
+            <button class="botao">Cadastro</button>
+        </form>
     </div>
 </body>
 </html>
