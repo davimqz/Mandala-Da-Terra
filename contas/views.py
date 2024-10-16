@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from .models import User
+from django.urls import reverse
+from culturas.views import saf_view, horta_view, add_plantacao_view
+
 
 User = get_user_model()
 
@@ -19,7 +22,7 @@ def cadastro_view(request):
         # Crie um novo usuário
         user = User.objects.create_user(cpf=cpf, password=password)
 
-        return redirect('login')  # Redirecionar para a página de login após o cadastro
+        return redirect(reverse('login'))  # Redirecionar para a página de login após o cadastro
 
     return render(request, 'cadastro.html')
 
@@ -52,3 +55,18 @@ def logout(request):
 def home_view(request):
     return render(request, 'home.html')
 
+
+
+
+
+
+
+#puxando view de outra pasta
+def saf(request):
+    return saf_view(request)
+
+def saf(request):
+    return horta_view(request)
+
+def add_plantacao(request):
+    return add_plantacao_view(request)

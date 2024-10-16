@@ -14,6 +14,21 @@ body {
 }
 
 .botao { 
+    color: #000000; 
+    border: 1px solid #4b5c6b; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 18px; 
+    margin: 15px; 
+    cursor: pointer; 
+    background-color: #ffffff; 
+    width: 150px; 
+    height: 50px; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.botao2 { 
     color: #ffffff; 
     border: 1px solid #4b5c6b; 
     text-align: center; 
@@ -22,7 +37,7 @@ body {
     font-size: 18px; 
     margin: 15px; 
     cursor: pointer; 
-    background-color: #4b5c6b; 
+    background-color: #566e83; 
     width: 150px; 
     height: 50px; 
     transition: background-color 0.3s, transform 0.3s; 

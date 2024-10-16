@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Área</title>
+    <link rel="stylesheet" href="{% static 'css/saf.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Qual área você deseja?</h2>
+        <div class="form">
+            <button class="botao2"><a href="{% url 'saf' %}">SAF</a></button>
+            <button class="botao"><a href="{% url 'horta' %}">Horta</a></button>
+        </div>
+        
+        <div class="grid">
+            <div class="grid-item">img</div>
+            <div class="grid-item">img</div>
+            <div class="grid-item">img</div>
+            <div class="grid-item">img</div>
+        </div>
+        
+        <a href="{% url 'add_plantacao' %}"><button class="add-botao">Adicionar plantação</button></a>
+    </div>
+</body>
+</html>
