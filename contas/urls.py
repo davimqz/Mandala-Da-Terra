@@ -12,6 +12,7 @@ urlpatterns = [
     path('saf/', views.saf_view, name='saf'),
     path('horta/', views.horta_view, name='horta'),
     path('app_plantacao/', views.add_plantacao_view, name='add_plantacao'),
+    path('painel/', views.painel_view, name='painel'),
 ]
 
 

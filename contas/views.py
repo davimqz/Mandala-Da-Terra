@@ -65,8 +65,11 @@ def home_view(request):
 def saf(request):
     return saf_view(request)
 
-def saf(request):
+def horta(request):
     return horta_view(request)
 
 def add_plantacao(request):
     return add_plantacao_view(request)
+
+def painel_view(request):
+    return painel_view(request)

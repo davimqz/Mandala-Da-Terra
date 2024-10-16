@@ -9,3 +9,6 @@ def saf_view(request):
 
 def add_plantacao_view(request):
     return render(request, 'add_plantacao.html')
+
+def painel_view(request):
+    return render(request, 'painel.html')
