@@ -13,6 +13,9 @@ def LoginView(request):
 def CadastroView(request):
     return render (request, 'cadastro.html')
 
+def PainelView(request):
+    return render (request, 'painel.html')
+
 def Login(request):
     if request.method == 'GET':
         return render (request, 'login.html')
