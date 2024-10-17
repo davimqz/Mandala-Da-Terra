@@ -23,6 +23,22 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 ### Histórias de Usuário
 - <strong>H1 - Adicionar culturas pelo usuário </strong>
 
+![H1](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2018.54.18.jpeg)
+
+- <strong>H2 - Diferenciar plantação entre SAF ou Horta </strong>
+
+![H2](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2019.04.27.jpeg)
+
+- <strong>H3 - Previsão do tempo </strong>
+
+![H3](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2019.24.45.jpeg)
+
+- <strong>H4 - Mostrar o dia de colheita e plantio </strong>
+
+![H4](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2020.25.46.jpeg)
+
+
+
 ## 📦 Tecnologias
 
 <img src="https://img.shields.io/badge/Python-F46036?style=for-the-badge&logo=python&logoColor=white"/>
