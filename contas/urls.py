@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
-from culturas.views import saf_view, horta_view, add_plantacao_view
 from django.conf import settings
 from django.conf.urls.static import static
+
 
 
 urlpatterns = [
@@ -11,8 +11,8 @@ urlpatterns = [
     path('cadastro/', views.cadastro_view, name='cadastro'),
     path('saf/', views.saf_view, name='saf'),
     path('horta/', views.horta_view, name='horta'),
-    path('app_plantacao/', views.add_plantacao_view, name='add_plantacao'),
     path('painel/', views.painel_view, name='painel'),
+    path('info/', views.painel_view, name='plantacoes_info'),
 ]
 
 

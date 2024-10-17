@@ -48,16 +48,13 @@ def login_view(request):
 
 
 
-def logout(request):
-    logout(request)
-    return redirect('login')  # Redirecionar para a página de login
-
 def home_view(request):
     return render(request, 'home.html')
 
 
 
-
+# views.py
+from django.shortcuts import render, redirect
 
 
 
@@ -73,3 +70,14 @@ def add_plantacao(request):
 
 def painel_view(request):
     return painel_view(request)
+
+def criar_plantacao(request):
+    return add_plantacao(request)
+
+from culturas.views import plantacoes_info as culturas_plantacoes_info
+
+def plantacoes_info(request):
+    return culturas_plantacoes_info(request)  # Chama a função da outra view
+
+def info_view(request):
+    return plantacoes_info(request)

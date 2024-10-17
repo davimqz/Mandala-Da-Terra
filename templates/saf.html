@@ -11,13 +11,13 @@
     <div class="container">
         <h2>Qual área você deseja?</h2>
         <div class="form">
-            <button class="botao2"><a href="{% url 'saf' %}">SAF</a></button>
-  
-            <button class="botao"><a href="{% url 'horta' %}">Horta</a></button>
+            <button class="botao2"><a href="{% url 'plantacoes_info' %}">SAF</a></button>
+            <button class="botao"><a href="{% url 'add_plantacao' %}">Horta</a></button>
         </div>
-        
         <div class="grid">
-            <div class="grid-item">img</div>
+            <a href="{% url 'plantacoes_info' %}">
+                <div class="grid-item">img</div>
+            </a>
             <div class="grid-item">img</div>
             <div class="grid-item">img</div>
             <div class="grid-item">img</div>

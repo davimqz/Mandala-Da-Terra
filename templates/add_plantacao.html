@@ -16,65 +16,44 @@
 </head>
 
 <body>
-    
     <div class="cabecalho">
         <a href="{% url 'saf' %}"><span class="botao-voltar">&#8592;</span></a>
     </div>
 
     <div class="conteudo">
-        <label for="nome-plantacao">Digite o nome da plantação</label>
-        <input type="text" id="nome-plantacao" name="nome-plantacao" placeholder="Nome da plantação">
+        <form method="POST" action="{% url 'add_plantacao' %}">
+            {% csrf_token %}
+            <label for="nome-plantacao">Digite o nome da plantação</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome da plantação" required>
 
-        <p>Qual rua está plantada?</p>
-        
-        <div class="opcoes-rua">
-            <label style="margin-right: 20px;"><input type="radio" id="saf" name="tipo-plantacao" value="SAF"> SAF</label>
-            <label><input type="radio" id="horta" name="tipo-plantacao" value="Horta"> Horta</label>
-        </div>
+            <p>Qual o tipo da plantação?</p>
+            <br>
+            <div class="opcoes-tipo">
+                <label style="margin-right: 20px;"><input type="radio" id="saf" name="tip" value="Saf"> SAF</label>
+                <label><input type="radio" id="tip" name="tip" value="Horta"> Horta</label>
+            </div>
+            <br>
+            <p>Selecione a(s) rua(s) onde está plantada:</p>
+            <br>
+            <div class="checkboxes-ruas">
+                <label><input type="checkbox" id="rua1" name="rua" value="Rua1"> Rua 1</label><br>
+                <label><input type="checkbox" id="rua2" name="rua" value="Rua2"> Rua 2</label><br>
+                <label><input type="checkbox" id="rua3" name="rua" value="Rua3"> Rua 3</label><br>
+                <label><input type="checkbox" id="rua4" name="rua" value="Rua4"> Rua 4</label><br>
+                <label><input type="checkbox" id="rua5" name="rua" value="Rua5"> Rua 5</label>
+            </div>
+            <br>
+            <label for="data_colheita">Data de Colheita:</label>
+            <input type="date" id="data_colheita" name="data_colheita">
 
-        <p>Selecione a(s) rua(s) onde está plantada:</p>
-        <div class="checkboxes-ruas">
-            <label><input type="checkbox" id="rua1" name="rua" value="Rua 1"> Rua 1</label><br>
-            <label><input type="checkbox" id="rua2" name="rua" value="Rua 2"> Rua 2</label><br>
-            <label><input type="checkbox" id="rua3" name="rua" value="Rua 3"> Rua 3</label><br>
-            <label><input type="checkbox" id="rua4" name="rua" value="Rua 4"> Rua 4</label><br>
-            <label><input type="checkbox" id="rua5" name="rua" value="Rua 5"> Rua 5</label>
-        </div>
+            <label for="data_regada">Data de Regada:</label>
+            <input type="date" id="data_regada" name="data_regada">
 
-        <div class="widget-calendario">
-            <h3>Calendário</h3>
-            <div id="calendario"></div>
-        </div>
-
-        <div class="botao-container">
-            <button class="botao-criar-plantacao">Criar plantação</button>
-        </div>
+            <div class="botao-container">
+                <button type="submit" class="botao-criar-plantacao">Criar plantação</button>
+            </div>
+        </form>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#calendario').fullCalendar({
-                locale: 'pt-br', 
-                header: {
-                    left: 'prev,next',
-                    center: 'title',
-                    right: 'month'
-                },
-                height: 200, 
-                contentHeight: 200, 
-                editable: true,
-                events: [
-                    {
-                        title: 'Plantio',
-                        start: '2024-10-10'
-                    },
-                    {
-                        title: 'Colheita',
-                        start: '2024-10-20'
-                    }
-                ]
-            });
-        });
-    </script>
 </body>
 </html>

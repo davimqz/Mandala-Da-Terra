@@ -1,0 +1,37 @@
+<!-- Exemplo em plantacoes_info.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Informações das Plantações</title>
+</head>
+<body>
+    <h1>Informações das Plantações</h1>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Ruas</th>
+            <th>Data de Colheita</th>
+            <th>Data de Regada</th>
+        </tr>
+        {% for plantacao in plantacoes %}
+        <tr>
+            <td>{{ plantacao.nome }}</td>
+            <td>{{ plantacao.tipo }}</td>
+            <td>{{ plantacao.ruas }}</td>
+            <td>{{ plantacao.data_colheita }}</td>
+            <td>{{ plantacao.data_regada }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <a href="{% url 'add_plantacao' %}">Adicionar Nova Plantação</a>
+    
+    <!-- Botão de Logout -->
+    <form method="POST" action="{% url 'logout' %}?next={% url 'cadastro' %}" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
