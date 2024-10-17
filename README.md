@@ -37,6 +37,10 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 ![H4](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2020.25.46.jpeg)
 
+- <strong>H5 - Notificação de SAF/Horta pelo usuário </strong>
+
+![H5](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/6296fe3b0f91db755ed750fad275d27ee96939dc/WhatsApp%20Image%202024-10-17%20at%2018.01.10.jpeg)
+
 
 <br>
 
