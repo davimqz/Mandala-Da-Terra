@@ -123,3 +123,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Diretório onde os arquivos de mídia serão armazenados
 MEDIA_URL = '/img/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'img/')
+
+# site que usei: https://home.openweathermap.org/
+OPENWEATHERMAP_API_KEY = 'cb5f3e07e4cb44e7a4eaedcc50c66c10'

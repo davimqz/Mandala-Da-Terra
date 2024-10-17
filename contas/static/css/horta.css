@@ -47,7 +47,7 @@ h2 {
     cursor: pointer;
 }
 
-.botao a {
+.botao a{
     text-decoration: none;
     color: #333;
 }
@@ -59,10 +59,9 @@ h2 {
 
 .botao:hover {
     background-color: #5d6d7e;
-    color: white;
 }
 
-.botao2 {
+.botao2{
     width: 48%;
     padding: 12px;
     border: 1px solid #d1d1d1;
@@ -72,7 +71,7 @@ h2 {
     cursor: pointer;
 }
 
-.botao2 a {
+.botao2 a{
     text-decoration: none;
     color: white;
 }
@@ -86,15 +85,10 @@ h2 {
 }
 
 .grid-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-weight: bold;
-    color: #4a5a6a;
 }
 
 .add-botao {
@@ -110,9 +104,8 @@ h2 {
 
 .add-botao:hover {
     background-color: #4a5a6a;
-    color: white;
+    color: white; 
 }
-
 
 .botao-voltar {
     position: absolute;

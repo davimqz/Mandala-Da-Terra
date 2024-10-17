@@ -1,1 +1,43 @@
-<p>tela horta</p>
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Área</title>
+    <link rel="stylesheet" href='{% static '/css/horta.css'%}?{% now "U" %}'>
+</head>
+<body>
+    
+    <div class="container">
+        <a href="{% url 'home' %}"><span class="botao-voltar">&#8592;</span></a>
+        <h2>Qual área você deseja?</h2>
+        <div class="form">
+            <button class="botao"><a href="{% url 'saf' %}">SAF</a></button>
+            <button class="botao2"><a>Horta</a></button>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Ruas</th>
+                <th>Data de Colheita</th>
+                <th>Data de Regada</th>
+            </tr>
+            {% for plantacao in plantacoes %}
+            <tr>
+                <td data-label="Nome">{{ plantacao.nome }}</td>
+                <td data-label="Tipo">{{ plantacao.tipo }}</td>
+                <td data-label="Ruas">{{ plantacao.ruas }}</td>
+                <td data-label="Data de Colheita">{{ plantacao.data_colheita }}</td>
+                <td data-label="Data de Regada">{{ plantacao.data_regada }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+        <a href="{% url 'add_plantacao' %}"><button class="add-botao">Adicionar plantação</button></a>
+    </div>
+
+</body>
+</html>

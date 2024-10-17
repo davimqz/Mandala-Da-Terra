@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Plantação</title>
-    <link rel="stylesheet" href="{% static 'css/add_plantacao.css' %}">
+    <link rel="stylesheet" href='{% static '/css/add_plantacao.css'%}?{% now "U" %}'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
@@ -29,8 +29,8 @@
             <p>Qual o tipo da plantação?</p>
             <br>
             <div class="opcoes-tipo">
-                <label style="margin-right: 20px;"><input type="radio" id="saf" name="tip" value="Saf"> SAF</label>
-                <label><input type="radio" id="tip" name="tip" value="Horta"> Horta</label>
+                <label style="margin-right: 20px;"><input type="radio" id="saf" name="tip" value="saf">SAF</label>
+                <label><input type="radio" id="tip" name="tip" value="horta">Horta</label>
             </div>
             <br>
             <p>Selecione a(s) rua(s) onde está plantada:</p>

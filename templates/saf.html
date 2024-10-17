@@ -5,25 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleção de Área</title>
-    <link rel="stylesheet" href="{% static 'css/saf.css' %}">
+    <link rel="stylesheet" href='{% static '/css/saf.css'%}?{% now "U" %}'>
+
+
 </head>
 <body>
+    
     <div class="container">
+        <a href="{% url 'home' %}"><span class="botao-voltar">&#8592;</span></a>
         <h2>Qual área você deseja?</h2>
         <div class="form">
-            <button class="botao2"><a href="{% url 'plantacoes_info' %}">SAF</a></button>
-            <button class="botao"><a href="{% url 'add_plantacao' %}">Horta</a></button>
+            <button class="botao2"><a>SAF</a></button>
+            <button class="botao"><a href="{% url 'horta' %}">Horta</a></button>
         </div>
+        <br>
         <div class="grid">
-            <a href="{% url 'plantacoes_info' %}">
-                <div class="grid-item">img</div>
-            </a>
-            <div class="grid-item">img</div>
-            <div class="grid-item">img</div>
-            <div class="grid-item">img</div>
+            {% for plantacao in plantacoes %}
+            <div class="grid-item"><td data-label="Nome">{{ plantacao.nome }}</td></div>
+            {% endfor %}
         </div>
-        
+        <!-- <table>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Ruas</th>
+                <th>Data de Colheita</th>
+                <th>Data de Regada</th>
+            </tr>
+            
+            <tr>
+                <td data-label="Tipo">{{ plantacao.tipo }}</td>
+                <td data-label="Ruas">{{ plantacao.ruas }}</td>
+                <td data-label="Data de Colheita">{{ plantacao.data_colheita }}</td>
+                <td data-label="Data de Regada">{{ plantacao.data_regada }}</td>
+            </tr>
+            
+        </table> -->
+        <br><br>
         <a href="{% url 'add_plantacao' %}"><button class="add-botao">Adicionar plantação</button></a>
     </div>
+
 </body>
 </html>

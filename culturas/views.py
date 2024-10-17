@@ -25,27 +25,27 @@ def add_plantacao_view(request):
             data_regada=data_regada,
             usuario=request.user  # Associar ao usuário logado
         )
-        return redirect('plantacoes_info')  # Redireciona para a página de informações
+        return redirect('home')  # Redireciona para a página de informações
 
     return render(request, 'add_plantacao.html')
 
 # culturas/views.py
 def plantacoes_info(request):
-    plantacoes = Plantacao.objects.filter(usuario=request.user)  # Filtra as plantações pelo usuário logado
-    return render(request, 'plantacoes_info.html', {'plantacoes': plantacoes})
+    #plantacoes = Plantacao.objects.filter(usuario=request.user)  # Filtra as plantações pelo usuário logado
+    return render(request, 'plantacoes_info.html')#, {'plantacoes': plantacoes})
 
 
 
 
 # Create your views here.
 def horta_view(request):
-    return render(request, 'horta.html')
+    plantacoes = Plantacao.objects.filter(tipo='horta', usuario=request.user)  # Filtra por tipo e usuário logado
+    return render(request, 'horta.html', {'plantacoes': plantacoes})
 
 def saf_view(request):
-    return render(request, 'saf.html')
+    plantacoes = Plantacao.objects.filter(tipo='saf', usuario=request.user)  # Filtra por tipo e usuário logado
+    return render(request, 'saf.html', {'plantacoes': plantacoes})
 
-# def add_plantacao_view(request):
-#     return render(request, 'add_plantacao.html')
 
 def painel_view(request):
     return render(request, 'painel.html')
@@ -55,6 +55,29 @@ def detalhe_plantacao_view(request):
 
 
 
+import requests
+from django.shortcuts import render
+from django.conf import settings
+
+def weather_view(request):
+    city = request.GET.get('city', 'Carpina')  # Cidade padrão ou cidade selecionada pelo usuário
+    api_key = settings.OPENWEATHERMAP_API_KEY
+    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric&lang=pt_br'
+
+    response = requests.get(url)
+    weather_data = response.json()
+
+    if weather_data.get('cod') == 200:
+        context = {
+            'city': weather_data['name'],
+            'temperature': weather_data['main']['temp'],
+            'description': weather_data['weather'][0]['description'],
+            'icon': weather_data['weather'][0]['icon'],
+        }
+    else:
+        context = {'error': 'Cidade não encontrada'}
+
+    return render(request, 'weather.html', context)
 
 
 
