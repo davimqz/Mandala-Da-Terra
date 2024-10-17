@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+</head>
+<body>
+    <h1>Previsão do Tempo</h1>
+
+    <form method="GET">
+        <label for="city">Escolha a cidade:</label>
+        <input type="text" id="city" name="city" placeholder="Digite o nome da cidade">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
+        <h2>{{ city }}</h2>
+        <p>Temperatura: {{ temperature }} °C</p>
+        <p>Condição: {{ description }}</p>
+        <img src="http://openweathermap.org/img/wn/{{ icon }}@2x.png" alt="{{ description }}">
+    {% endif %}
+</body>
+</html> -->
