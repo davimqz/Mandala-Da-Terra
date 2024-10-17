@@ -19,6 +19,10 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 - **Previsão Climática em Tempo Real** - Permite que o nosso app informe, com precisão, a previsão climática, de acordo com a localização do usuário em tempo real
 - **Diagramação Dos Tipos de Culturas** - Oferece, de modo simplificado, a organização conceitual, a textual e, sobretudo, a visual de todos as culturas cadastradas
 
+# Status Report 1
+### Histórias de Usuário
+- <strong>H1 - Adicionar culturas pelo usuário </strong>
+
 ## 📦 Tecnologias
 
 <img src="https://img.shields.io/badge/Python-F46036?style=for-the-badge&logo=python&logoColor=white"/>
