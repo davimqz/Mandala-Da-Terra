@@ -40,10 +40,10 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-          cd ./
+          cd Mandala-Da-Terra/
           zip release.zip ./* -r
           cd ..
-          mv ./release.zip .
+          mv Mandala-Da-Terra/release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
