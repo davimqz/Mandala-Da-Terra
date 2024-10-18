@@ -19,6 +19,46 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 - **Previsão Climática em Tempo Real** - Permite que o nosso app informe, com precisão, a previsão climática, de acordo com a localização do usuário em tempo real
 - **Diagramação Dos Tipos de Culturas** - Oferece, de modo simplificado, a organização conceitual, a textual e, sobretudo, a visual de todos as culturas cadastradas
 
+# Status Report 1
+### Histórias de Usuário
+- <strong>H1 - Adicionar culturas pelo usuário </strong>
+
+![H1](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2018.54.18.jpeg)
+
+- <strong>H2 - Diferenciar plantação entre SAF ou Horta </strong>
+
+![H2](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2019.04.27.jpeg)
+
+- <strong>H3 - Previsão do tempo </strong>
+
+![H3](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2019.24.45.jpeg)
+
+- <strong>H4 - Mostrar o dia de colheita e plantio </strong>
+
+![H4](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/240fef3589f0ce7b5bca48781e750fdc7d28cefd/WhatsApp%20Image%202024-10-16%20at%2020.25.46.jpeg)
+
+- <strong>H5 - Notificação de SAF/Horta pelo usuário </strong>
+
+![H5](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/6296fe3b0f91db755ed750fad275d27ee96939dc/WhatsApp%20Image%202024-10-17%20at%2018.01.10.jpeg)
+
+
+<br>
+
+- <strong>Backlog</strong>
+
+![Backlog](https://github.com/davimqz/Mandala-Da-Terra/blob/teste/Captura%20de%20Tela%202024-10-16%20a%CC%80s%2009.18.59.png?raw=true)
+
+<br>
+
+- <strong>Board</strong>
+
+![Board](https://github.com/davimqz/Mandala-Da-Terra/blob/teste/Captura%20de%20Tela%202024-10-16%20a%CC%80s%2009.19.35.png?raw=true)
+
+<br>
+
+- <strong>Diagrama de Atividades</strong>
+![Diagrama de atividade (4)](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/cc29caade053d4b302ad57414cae0c6a22c33c9a/Captura%20de%20Tela%202024-10-17%20a%CC%80s%2021.22.49.png)
+
 ## 📦 Tecnologias
 
 <img src="https://img.shields.io/badge/Python-F46036?style=for-the-badge&logo=python&logoColor=white"/>
