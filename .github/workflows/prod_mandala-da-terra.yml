@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Mandala-Da-Terra
+name: Build and deploy Python app to Azure Web App - Mandala-da-Terra
 
 on:
   push:
@@ -29,21 +29,11 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-      - name: Cleaning testing files
-        run: |
-          rm db.sqlite3
-          rm .env
-          cd ..
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
-        run: |
-          cd setup/
-          zip release.zip ./* -r
-          cd ..
-          mv setup/release.zip .
+        run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
@@ -75,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6525BB8EA4A44E9EAC96EB023F87424D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_755E0D79734A45C6BAC3B70A30CC2660 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_773DE0A887DA47E392FDA989976F4139 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_000C638A00284DA29D0DD1EEDC25978D }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8E3F7B9B9E45404BB3AC509ADA349001 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_28F877A87F5C4D1C97F6B0795DA1A0E2 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'Mandala-Da-Terra'
+          app-name: 'Mandala-da-Terra'
           slot-name: 'Production'
           
