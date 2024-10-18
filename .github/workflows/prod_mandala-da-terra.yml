@@ -40,10 +40,10 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-          cd setup/
+          cd ./
           zip release.zip ./* -r
           cd ..
-          mv setup/release.zip .
+          mv ./release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
