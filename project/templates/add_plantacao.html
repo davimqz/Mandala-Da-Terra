@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Plantação</title>
+    <link rel="stylesheet" href='{% static '/css/add_plantacao.css'%}?{% now "U" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/locale/pt-br.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    
+
+    <div class="conteudo">
+        <a class="botao-a" href="{% url 'home' %}"><span class="botao-voltar">&#8592;</span></a>
+        <form method="POST" action="{% url 'add_plantacao' %}">
+            {% csrf_token %}
+            <label for="nome-plantacao">Digite o nome da plantação</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome da plantação" required>
+
+            <p>Qual o tipo da plantação?</p>
+            <br>
+            <div class="opcoes-tipo">
+                <label style="margin-right: 20px;"><input type="radio" id="saf" name="tip" value="saf">SAF</label>
+                <label><input type="radio" id="tip" name="tip" value="horta">Horta</label>
+            </div>
+            <br>
+            <p>Selecione a(s) rua(s) onde está plantada:</p>
+            <br>
+            <div class="checkboxes-ruas">
+                <label><input type="checkbox" id="rua1" name="rua" value="Rua1"> Rua 1</label><br>
+                <label><input type="checkbox" id="rua2" name="rua" value="Rua2"> Rua 2</label><br>
+                <label><input type="checkbox" id="rua3" name="rua" value="Rua3"> Rua 3</label><br>
+                <label><input type="checkbox" id="rua4" name="rua" value="Rua4"> Rua 4</label><br>
+                <label><input type="checkbox" id="rua5" name="rua" value="Rua5"> Rua 5</label>
+            </div>
+            <br>
+            <label for="data_plantacao">Data da Plantação:</label>
+            <input type="date" id="data_plantacao" name="data_plantacao">
+
+            <label for="data_regada">Data de Regada:</label>
+            <input type="date" id="data_regada" name="data_regada">
+
+            <div class="botao-container">
+                <button type="submit" class="botao-criar-plantacao">Criar plantação</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

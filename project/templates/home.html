@@ -1,0 +1,18 @@
+<html lang="pt-BR">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Registro</title>
+    <link rel="stylesheet" href='{% static '/css/home.css'%}?{% now "U" %}'>
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'img/logo.png' %}" alt="imagem da logo" style="width: 150px; height: auto; padding: 15px;">
+        <a href="{% url 'saf' %}"><button class="botao">SAF</button></a>
+        <a href="{% url 'horta' %}"><button class="botao">Horta</button></a>
+        <br>
+        <a href="{% url 'add_plantacao' %}"><button class="botao2">Adicionar plantação</button></a>
+    </div>
+</body>
+</html>

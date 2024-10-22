@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.botao {
+    width: 48%;
+    padding: 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fdfdfd;
+    cursor: pointer;
+}
+
+.botao a {
+    text-decoration: none;
+    color: #333;
+}
+
+.botao {
+    background-color: #ffffff;
+    color: #5d6d7e;
+}
+
+.botao:hover {
+    background-color: #5d6d7e;
+    color: white;
+}
+
+.botao2 {
+    width: 48%;
+    padding: 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #5d6d7e;
+    cursor: pointer;
+}
+
+.botao2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #4a5a6a;
+}
+
+.add-botao {
+    width: 100%;
+    padding: 12px;
+    background-color: #5d6d7e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-botao:hover {
+    background-color: #4a5a6a;
+    color: white;
+}
+
+
+.container .botao-a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #5d6d7e;
+}
+
+.grid-item a{
+    text-decoration: none;
+    color:#4a5a6a;
+}
+
+.grid-item a:hover{
+    text-decoration: underline;
+    color:#6c87a1;
+}
