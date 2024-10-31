@@ -1,0 +1,30 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.entre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.divisor {
+    flex: 1;
+    margin: 0 1rem;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.botao-divisor {
+    color: #4b5563;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,9 @@
+{% block content %}
+<h2>Deletar Nota</h2>
+<p>Tem certeza de que deseja deletar a nota "{{ nota.titulo }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, deletar</button>
+</form>
+<a href="{% url 'lista_notas' %}">Cancelar</a>
+{% endblock %}

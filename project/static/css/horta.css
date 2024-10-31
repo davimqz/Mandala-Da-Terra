@@ -129,3 +129,23 @@ h2 {
     text-decoration: underline;
     color:#6c87a1;
 }
+
+
+.entre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.divisor {
+    flex-grow: 1;
+    border-top: 1px solid #d1d5db;
+    margin: 0 1rem;
+}
+
+.botao-divisor {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

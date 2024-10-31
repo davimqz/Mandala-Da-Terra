@@ -1,0 +1,85 @@
+body {
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+}
+
+.entre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.divisor {
+    flex-grow: 1;
+    border-top: 1px solid #d1d5db;
+    margin: 0 1rem;
+}
+
+.botao {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.seta, .menu {
+    color: #4b5563;
+    font-size: 1.5rem;
+}
+
+.margem {
+    margin-bottom: 1rem;
+}
+
+.rotulo {
+    display: block;
+    color: #4b5563;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.entrada {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #e5e7eb;
+    padding: 0.5rem;
+    border: none;
+}
+
+.texto {
+    width: 100%;
+    height: 10rem;
+    border: 2px solid #3b82f6;
+    padding: 0.5rem;
+    color: #6b7280;
+}
+
+
+.save{
+    text-align: center;
+    background-color: #00ff22;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.cancel{
+    text-align: center;
+    background-color: #ff0000;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+

@@ -50,34 +50,3 @@ def login_view(request):
 
 def home_view(request):
     return render(request, 'home.html')
-
-
-
-# views.py
-from django.shortcuts import render, redirect
-
-
-
-#puxando view de outra pasta
-def saf(request):
-    return saf_view(request)
-
-def horta(request):
-    return horta_view(request)
-
-def add_plantacao(request):
-    return add_plantacao_view(request)
-
-def painel_view(request):
-    return painel_view(request)
-
-def criar_plantacao(request):
-    return add_plantacao(request)
-
-from apps.culturas.views import plantacoes_info as culturas_plantacoes_info
-
-def plantacoes_info(request):
-    return culturas_plantacoes_info(request)  # Chama a função da outra view
-
-def info_view(request):
-    return plantacoes_info(request)

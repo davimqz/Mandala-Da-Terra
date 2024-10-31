@@ -1,0 +1,49 @@
+<!-- apps/notas/templates/notas/listar_notas.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e043eb6ea7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/lista_notas.css' %}">
+    <title>Minhas Anotações</title>
+</head>
+<body>
+    
+    <div class="entre">
+        <a href="{% url 'notas:meu_perfil'%}">
+            <button class="botao-divisor" aria-label="Seta para voltar">
+                <span class="seta">&#8592;</span>
+            </button>
+        </a>
+        
+        <div class="divisor"></div>
+        <a href="{% url 'notas:meu_perfil'%}">
+            <button class="botao-divisor" aria-label="Menu">
+                <span class="menu">&#9776;</span>
+            </button>
+        </a>
+    </div>
+
+    <h1>Minhas Anotações</h1>
+    <ul>
+        {% for nota in notas %}
+        <li>
+            <strong>Título: </strong>{{ nota.titulo }} <a style="text-decoration: none; color:rgb(2, 129, 55); padding: 10px;" href="{% url 'notas:editar_nota' nota.id %}"><i class="fa-solid fa-pen-to-square"></i></a>             <a style="text-decoration: none; color:rgb(255, 0, 0);" href="{% url 'notas:confirmar_deletar' nota.id %}" 
+            onclick="confirmarExclusao(event)"><i class="fa-solid fa-trash"></i>
+            </a><br>
+
+            <span class="conteudo">
+                {{ nota.conteudo|slice:":40" }}...
+                <br>
+                <a href="{% url 'notas:ver_nota' nota.id %}">Ver {{ nota.titulo }}</a>  
+            </span>
+            <br>
+        </li>
+        <br><br>
+        {% endfor %}
+    </ul>
+     <span style="color: black;"><strong>Adicionar</strong> <a href="{% url 'notas:nova_nota' %}"><i style="color: rgb(2, 129, 55); text-decoration :none;" class="fa-solid fa-plus"></i></a></span>
+</body>
+</html>

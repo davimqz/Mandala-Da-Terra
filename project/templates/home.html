@@ -8,6 +8,16 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="entre">        
+            <div class="divisor"></div>
+            <a href="{% url 'notas:meu_perfil'%}">
+                <button class="botao-divisor" aria-label="Menu">
+                    <span class="menu">&#9776;</span>
+                </button>
+            </a>
+        </div>
+
         <img src="{% static 'img/logo.png' %}" alt="imagem da logo" style="width: 150px; height: auto; padding: 15px;">
         <a href="{% url 'saf' %}"><button class="botao">SAF</button></a>
         <a href="{% url 'horta' %}"><button class="botao">Horta</button></a>

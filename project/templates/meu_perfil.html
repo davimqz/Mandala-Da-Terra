@@ -1,0 +1,69 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/meu_perfil.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="entre">
+            <button onclick="window.history.back()" class="botao-divisor">
+                <i class="seta fas fa-arrow-left"></i>
+            </button>
+            <div class="divisor"></div>
+            <button class="botao-divisor">
+                <i class="menu fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div class="foto_usuario">
+            <div class="foto_usuario">
+                <i class="fas fa-user icone_foto"></i>
+            </div>
+            <button class="editar_foto">Editar foto de usuário</button>
+            <hr class="linha">
+        </div>
+
+        <div class="botoes_acao">
+            <a href="{% url 'notas:notificacao'%}">
+                <button class="botao">
+                    <i class="fas fa-cog icone_botao"></i> Configuração
+                </button>
+            </a>
+
+            <a href="{% url 'notas:lista_notas'%}">
+                <button class="botao">
+                    <i class="fas fa-sticky-note icone_botao"></i> Anotações
+                </button>
+            </a>
+
+            <a href="{% url 'home'%}">
+                <button class="botao">
+                    <i class="fas fa-seedling icone_botao"></i> Editar plantação
+                </button>
+            </a>
+            
+            <a href="">
+                <button class="botao">
+                    <i class="fas fa-robot icone_botao"></i> Acessar Chatbot
+                </button>
+            </a>
+
+            <a href="">
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button class="botao">
+                        <i class="fas fa-sign-out-alt icone_botao"></i> Sair do app
+                    </button>
+                </form>
+            </a>
+            
+        </div>
+    </div>
+</body>
+</html>

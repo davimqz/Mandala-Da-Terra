@@ -15,7 +15,9 @@
 </head>
 <body>
     <div class="container">
-        <a href="{% url 'home' %}"><span class="botao-voltar">&#8592;</span></a>
+        <button onclick="window.history.back()" class="botao-voltar" aria-label="Seta para voltar">
+            <span class="seta">&#8592;</span>
+        </button>
 
         <div class="grid1">
             <div class="weather">

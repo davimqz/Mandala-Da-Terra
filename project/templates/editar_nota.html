@@ -1,0 +1,48 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Anotações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/nova_notas.css' %}">
+</head>
+
+<body class="coluna">
+
+    <div class="container">
+
+        <div class="entre">
+            <button onclick="window.history.back()" class="botao" aria-label="Seta para voltar">
+                <span class="seta">&#8592;</span>
+            </button>
+            
+            <div class="divisor"></div>
+            <a href="{% url 'notas:meu_perfil'%}">
+                <button class="botao" aria-label="Menu">
+                    <span class="menu">&#9776;</span>
+                </button>
+            </a>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="margem">
+                <label class="rotulo" for="titulo">Título:</label>
+                <input class="entrada" type="text" id="titulo" name="titulo" value="{{ nota.titulo }}" required>
+            </div>
+
+            <div class="margem">
+                <label class="rotulo" for="conteudo">Conteúdo:</label>
+                <textarea class="texto" id="conteudo" name="conteudo" required>{{ nota.conteudo }}</textarea>
+            </div>
+
+            <div class="btn">
+                <button class="save" type="submit">Salvar</button>
+                <a href="{% url 'notas:lista_notas' %}"><button class="cancel">Cancelar</button></a>
+            </div>
+        </form>
+
+    </div>
+</body>
+

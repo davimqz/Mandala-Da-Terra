@@ -10,7 +10,20 @@
 <body>
     
     <div class="container">
-        <a class="botao-a" href="{% url 'home' %}"><span class="botao-voltar">&#8592;</span></a>
+
+        <div class="entre">
+            <button onclick="window.history.back()" class="botao-divisor" aria-label="Seta para voltar">
+                <span class="seta">&#8592;</span>
+            </button>
+            
+            <div class="divisor"></div>
+            <a href="{% url 'notas:meu_perfil'%}">
+                <button class="botao-divisor" aria-label="Menu">
+                    <span class="menu">&#9776;</span>
+                </button>
+            </a>
+        </div>
+        
         <h2>Qual área você deseja?</h2>
         <div class="form">
             <button class="botao"><a  href="{% url 'saf' %}">SAF</a></button>

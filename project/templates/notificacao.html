@@ -1,0 +1,53 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/notificacao.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="entre">
+            <button onclick="window.history.back()" class="botao-divisor" aria-label="Seta para voltar">
+                <span class="seta">&#8592;</span>
+            </button>
+            
+            <div class="divisor"></div>
+            <a href="{% url 'notas:meu_perfil'%}">
+                <button class="botao-divisor" aria-label="Menu">
+                    <span class="menu">&#9776;</span>
+                </button>
+            </a>
+        </div>
+        
+        <div class="opcoes">
+            <div class="opcao">
+                <span class="texto-opcao">Notificações</span>
+                <label class="botao-alternancia">
+                    <input type="checkbox" checked>
+                    <span class="alternador redondo"></span>
+                </label>
+            </div>
+            
+            <div class="opcao">
+                <span class="texto-opcao">Som</span>
+                <label class="botao-alternancia">
+                    <input type="checkbox" checked>
+                    <span class="alternador redondo"></span>
+                </label>
+            </div>
+            
+            <div class="opcao">
+                <span class="texto-opcao">Localização</span>
+                <label class="botao-alternancia">
+                    <input type="checkbox" checked>
+                    <span class="alternador redondo"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

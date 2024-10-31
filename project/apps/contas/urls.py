@@ -11,8 +11,6 @@ urlpatterns = [
     path('cadastro/', views.cadastro_view, name='cadastro'),
     path('saf/', views.saf_view, name='saf'),
     path('horta/', views.horta_view, name='horta'),
-    path('painel/', views.painel_view, name='painel'),
-    path('plantacoes_info/<str:nome>/', views.painel_view, name='plantacoes_info'),
 ] 
 
 
