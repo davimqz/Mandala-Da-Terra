@@ -71,8 +71,47 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 - <strong>Diagrama de Atividades</strong>
 ![Diagrama de atividade (4)](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/cc29caade053d4b302ad57414cae0c6a22c33c9a/Captura%20de%20Tela%202024-10-17%20a%CC%80s%2021.22.49.png)
 
-# Status Report 1
+# Status Report 2
 ### Histórias de Usuário
+- <strong>H1 - Adicionar ruas </strong>
+
+![H1](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%201.png?raw=true)
+
+- <strong>H2 - Saber a previsão do tempo </strong>
+
+![H2](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%202.png?raw=true)
+
+- <strong>H3 - Saber o dia da colheita </strong>
+
+![H3](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%203.png?raw=true)
+
+- <strong>H4 - Adicionar culturas </strong>
+
+![H4](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%204.png?raw=true)
+
+- <strong>H5 - Editar/ remover culturas </strong>
+
+![H5](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%205.png?raw=true)
+
+- <strong>H6 - Espaço para anotações </strong>
+
+![H6](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%206.png?raw=true)
+
+- <strong>H7 - Editar/ remover anotações </strong>
+
+![H7](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%207.png?raw=true)
+
+- <strong>H8 - Saber sobre pragas comuns no solo </strong>
+
+![H8](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%208.png?raw=true)
+
+- <strong>H9 - Pesquisar plantas companheiras de uma cultura </strong>
+
+![H9](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%209.png?raw=true)
+
+- <strong>H10 - Saber o tamanho ideal da minha horta baseado no número de pessoas </strong>
+
+![H10](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%2010.png?raw=true)
 
 
 ## 📦 Tecnologias
