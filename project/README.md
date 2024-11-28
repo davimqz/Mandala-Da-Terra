@@ -11,6 +11,12 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 |     Data de plantio/ Data de colheita   |    ✔️     |
 |     Previsão climática em tempo real    |    ✔️     |
 |     Diagramação dos tipos de cultura    |    ✔️     |
+|     Tamanho de horta ideal              |    ✔️     |
+|     Informações sobre pragas do solo    |    ✔️     |
+|     Plantas companheiras                |    ✔️     |
+|     Separação por ruas                  |    ✔️     |
+|     Espaço para anotações               |    ✔️     |
+
 
 ## ⚙️ Funcionalidades
 
@@ -18,6 +24,12 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 - **Data de Plantio/ Data de Colheita** -  Viabiliza a noção temporal.
 - **Previsão Climática em Tempo Real** - Permite que o nosso app informe, com precisão, a previsão climática, de acordo com a localização do usuário em tempo real
 - **Diagramação Dos Tipos de Culturas** - Oferece, de modo simplificado, a organização conceitual, a textual e, sobretudo, a visual de todos as culturas cadastradas
+- **Usuário ter conhecimento das pragas do solo** -  Informa sobre pragas comuns do solo e como identificá-las para cada tipo de cultura.
+- **Separação por ruas** - Permite organizar as culturas agrícolas por ruas, facilitando o planejamento e manejo da produção.
+- **Espaço para anotações** - Área dedicada para o usuário registrar informações e observações da produção.
+- **Tamanho de horta ideal** - Sugere o tamanho da horta com base no número de pessoas beneficiadas.
+- **Culturas companheiras** - Exibe plantas compatíveis ao inserir uma cultura, ajudando no consórcio agrícola.
+
 
 # Status Report 1
 ### Histórias de Usuário
