@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Web</title>
+    <link rel="stylesheet" href='{% static '/css/task_create.css'%}?{% now "U" %}'>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="fundo_pagina">
+    <div class="caixa_principal">
+      <header class="cabecalho">
+        <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
+        <h1 class="titulo">Adicionando Cultura</h1>
+      </header>
+
+      <main class="conteudo">
+        <div class="card">
+          <div class="form-container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+        <label for="title-form">Cultura:</label>
+        <select class="opcoes" name="title" id="opcoes" required>
+            <option value="Batata🥔">🥔 Batata</option>
+            <option value="Tomate🍅">🍅 Tomate</option>
+            <option value="Cenoura🥕">🥕 Cenoura</option>
+            <option value="Alface🥬">🥬 Alface</option>
+            <option value="Pepino🥒">🥒 Pepino</option>
+            <option value="Beterraba🍆">🍆 Beterraba</option>
+            <option value="Pimentão🫑">🫑 Pimentão</option>
+            <option value="Brócolis🥦">🥦 Brócolis</option>
+            <option value="Milho🌽">🌽 Milho</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="title-form">Rua:</label>
+         <select class="opcoes" name="rua" id="rua" required>
+            <option value="Rua 1">Rua 1</option>
+            <option value="Rua 2">Rua 2</option>
+            <option value="Rua 3">Rua 3</option>
+            <option value="Rua 4">Rua 4</option>
+            <option value="Rua 5">Rua 5</option>
+            <option value="Rua 6">Rua 6</option>
+            <option value="Rua 7">Rua 7</option>
+            <option value="Rua 8">Rua 8</option>
+            <option value="Rua 9">Rua 9</option>
+            <option value="Rua 10">Rua 10</option>
+            <option value="Rua 11">Rua 11</option>
+            <option value="Rua 12">Rua 12</option>
+        </select>
+        <br><br>
+        <label for="data_plantio">Data de Plantio:</label>
+        <input type="date" name="data_plantio" id="data_plantio"><br>
+
+        </div>
+         <label for="description">Descrição:</label>
+        <textarea class="notas" name="description" id="description"></textarea>
+     <div class="buttons-add">
+        <button type="submit" class="botao_adicionar" >Criar Tarefa</button>
+        <a class="botao_adicionar" href="{% url 'crops:task_list' %}">Voltar</a>
+    </div>
+    </form>
+      </main>
+
+      <footer class="rodape">
+        <a href="{% url 'crops:pesquisar_cultura' %}"
+          ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+        ></a>
+        <a href="{% url 'crops:task_create'%}"
+          ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+        ></a>
+        <a href="{% url 'crops:home'%}"
+          ><button class="icone_rodape"><i class="fas fa-home"></i></button
+        ></a>
+        <a href="{% url 'crops:praga' %}"
+          ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+        ></a>
+        <a href="{% url 'notas:meu_perfil'%}"
+          ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+        ></a>
+      </footer>
+    </div>
+  </body>
+</html>

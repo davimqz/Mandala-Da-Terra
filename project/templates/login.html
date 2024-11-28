@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+    <div class="login-container">
+        <form method="POST" class="login-form">
+            {% csrf_token %}
+
+            <div class="logo-container">
+                <img alt="" src="{% static 'img/Logo.png'%}" class="logo"/>
+            </div>
+            
+            <h1 class="form-title">
+                Faça o seu login
+            </h1>
+            <div class="input-group">
+                <label for="email" class="input-label">Email</label>
+                <input id="email" name="email" type="email" placeholder="Digite seu Email" class="input-field"/>
+            </div>
+            
+            <div class="input-group">
+                <label for="password" class="input-label">Senha</label>
+                <input id="password" name="password" type="password" placeholder="Digite uma senha" class="input-field"/>
+                
+                <p class="forgot-password">
+                    <a href="#" class="forgot-password-link">
+                        Esqueci a senha
+                    </a>
+                </p>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="submit-btn">
+                    Entrar
+                </button>
+                
+                <a href="{% url 'cadastro' %}">
+                    <button type="button" class="signup-btn">
+                        Fazer cadastro
+                    </button>
+                </a>
+            </div>
+        </form>
+        {% for message in messages %}
+        <p class="message {{ message.tags }}">{{ message }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

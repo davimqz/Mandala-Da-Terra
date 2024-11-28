@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caramujos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href='{% static '/css/praga_info.css'%}?{% now "U"
+    %}'>
+  </head>
+
+  <div class="caixa_principal">
+    <header class="cabecalho">
+      <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
+    </header>
+    <body>
+      <main class="conteudo">
+        <section class="cartao">
+          <h2 class="titulo-cartao">Caramujos</h2>
+
+          <img
+            src="https://em-content.zobj.net/thumbs/240/apple/354/snail_1f40c.png"
+            alt="Caramujo"
+            class="imagem-cartao"
+          />
+
+          <p class="texto-cartao">
+            São transmissores de doenças quando as hortaliças são consumidas com
+            vestígios do muco que eles deixam ao trilhar pelas plantas. Por isso
+            é tão importante a higienização das verduras e legumes. Além disso,
+            estas pragas impactam negativamente na produtividade das culturas e,
+            tanto na horta quanto no jardim, podem causar danos estéticos e até
+            matar as plantas.
+          </p>
+        </section>
+
+        <section class="cartao">
+          <h2 class="titulo-cartao">Como combater</h2>
+          <p class="texto-cartao">
+            Experimente coletá-los manualmente ao amanhecer, ou crie barreiras
+            ao redor das plantas com cascas de ovo ou areia grossa. Armadilhas
+            com cerveja atraem os caramujos e ajudam ...
+          </p>
+        </section>
+      </main>
+      <footer class="rodape">
+        <a href="{% url 'crops:pesquisar_cultura' %}"
+          ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+        ></a>
+        <a href="{% url 'crops:task_create'%}"
+          ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+        ></a>
+        <a href="{% url 'crops:home'%}"
+          ><button class="icone_rodape"><i class="fas fa-home"></i></button
+        ></a>
+        <a href="{% url 'crops:praga' %}"
+          ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+        ></a>
+        <a href="{% url 'notas:meu_perfil'%}"
+          ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+        ></a>
+      </footer>
+    </body>
+  </div>
+</html>

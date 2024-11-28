@@ -1,0 +1,57 @@
+{% load static %}
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Web</title>
+    <link rel="stylesheet" href='{% static "/css/anotar.css" %}?{% now "U" %}'>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+<body class="fundo_pagina">
+    <div class="caixa_principal">
+        <header class="cabecalho">
+            <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo" />
+            <h1 class="titulo">Editar Anotações</h1>
+        </header>
+
+
+        <main class="conteudo">
+            <div class="card">
+                <div class="botoes_acao">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <label for="conteudo">Conteúdo:</label><br>
+                        <textarea name="conteudo" id="conteudo" rows="4" cols="48">{{ nota.conteudo }}</textarea><br><br>
+                        <button class="botao" type="submit">Salvar Alterações</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <a href="{% url 'crops:pesquisar_cultura' %}"
+              ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+            ></a>
+            <a href="{% url 'crops:task_create'%}"
+              ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+            ></a>
+            <a href="{% url 'crops:home'%}"
+              ><button class="icone_rodape"><i class="fas fa-home"></i></button
+            ></a>
+            <a href="{% url 'crops:praga' %}"
+              ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+            ></a>
+            <a href="{% url 'notas:meu_perfil'%}"
+              ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+            ></a>
+          </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pragas Comuns</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href='{% static '/css/praga.css'%}?{% now "U" %}'>
+  </head>
+
+  <div class="caixa_principal">
+    <header class="cabecalho">
+      <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
+      <h1 class="titulo">Pragas comuns</h1>
+    </header>
+    <body>
+      <main class="conteudo">
+        <section class="cartao">
+          <h2 class="titulo-cartao">Caramujos</h2>
+
+          <img
+            src="https://em-content.zobj.net/thumbs/240/apple/354/snail_1f40c.png"
+            alt="Caramujo"
+            class="imagem-cartao"
+          />
+          <p class="texto-cartao">
+            São transmissores de doenças quando as hortaliças são consumidas com
+            vestígios...
+          </p>
+          <a href="{% url 'crops:caramujo'%}">
+            <button class="botao-cartao">
+              Ver mais <span class="icone-mais">+</span>
+            </button>
+          </a>
+        </section>
+
+        <section class="cartao">
+          <h2 class="titulo-cartao">Lagarta</h2>
+          <img
+            src="https://em-content.zobj.net/source/apple/271/worm_1fab1.png"
+            alt="Lagarta"
+            class="imagem-cartao"
+          />
+          <p class="texto-cartao">
+            Todos os tipos de lagartas podem ser consideradas pragas em hortas e
+            jardins. Elas causam...
+          </p>
+          <a href="{% url 'crops:lagarta'%}">
+            <button class="botao-cartao">
+              Ver mais <span class="icone-mais">+</span>
+            </button>
+          </a>
+        </section>
+      </main>
+      <footer class="rodape">
+        <a href="{% url 'crops:pesquisar_cultura' %}"
+          ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+        ></a>
+        <a href="{% url 'crops:task_create'%}"
+          ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+        ></a>
+        <a href="{% url 'crops:home'%}"
+          ><button class="icone_rodape"><i class="fas fa-home"></i></button
+        ></a>
+        <a href="{% url 'crops:praga' %}"
+          ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+        ></a>
+        <a href="{% url 'notas:meu_perfil'%}"
+          ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+        ></a>
+      </footer>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,42 @@
+[
+    {
+        "model": "crops.crop",
+        "pk": 1,
+        "fields": {
+            "name": "Tomate",
+            "growing_period": 1
+        }
+    },
+    {
+        "model": "crops.crop",
+        "pk": 2,
+        "fields": {
+            "name": "Cebola",
+            "growing_period": 45
+        }
+    },
+    {
+        "model": "crops.crop",
+        "pk": 3,
+        "fields": {
+            "name": "Cenoura",
+            "growing_period": 70
+        }
+    },
+    {
+        "model": "crops.crop",
+        "pk": 4,
+        "fields": {
+            "name": "Alho",
+            "growing_period": 90
+        }
+    },
+    {
+        "model": "crops.crop",
+        "pk": 5,
+        "fields": {
+            "name": "Batata",
+            "growing_period": 100
+        }
+    }
+]
