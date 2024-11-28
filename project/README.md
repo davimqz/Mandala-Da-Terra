@@ -58,18 +58,22 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 - <strong>Backlog</strong>
 
-![Backlog](https://github.com/davimqz/Mandala-Da-Terra/blob/teste/Captura%20de%20Tela%202024-10-16%20a%CC%80s%2009.18.59.png?raw=true)
+![Backlog](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/backlog.png?raw=true)
 
 <br>
 
 - <strong>Board</strong>
 
-![Board](https://github.com/davimqz/Mandala-Da-Terra/blob/teste/Captura%20de%20Tela%202024-10-16%20a%CC%80s%2009.19.35.png?raw=true)
+![Board](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/board.png?raw=true)
 
 <br>
 
 - <strong>Diagrama de Atividades</strong>
 ![Diagrama de atividade (4)](https://raw.githubusercontent.com/davimqz/Mandala-Da-Terra/cc29caade053d4b302ad57414cae0c6a22c33c9a/Captura%20de%20Tela%202024-10-17%20a%CC%80s%2021.22.49.png)
+
+# Status Report 1
+### Histórias de Usuário
+
 
 ## 📦 Tecnologias
 
