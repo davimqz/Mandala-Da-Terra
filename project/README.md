@@ -99,6 +99,10 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 <a href="https://www.notion.so/G11-Projeto-ll-3d806a265dc54458967775d435aa8bab" target="_blank">
     <img src="https://img.shields.io/badge/Notion-3C3744?style=for-the-badge&logo=notion&logoColor=white" alt="Notion"/>
 </a>
+<a href="https://www.figma.com/design/P2xUkULcDTnbgSQGM44Ush/Mandala-da-Terra?node-id=0-1&node-type=canvas&t=WSVP8BFsjMvTomPg-0" target="_blank">
+    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+</a>
+
 
 
 ## 👥 Creditos
