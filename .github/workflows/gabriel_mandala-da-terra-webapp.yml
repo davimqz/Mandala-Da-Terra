@@ -2,12 +2,12 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Mandala-da-Terra-webapp
+name: Build and deploy Python app to Azure Web App - mandaladaterradeploy
 
 on:
   push:
     branches:
-      - gabriel
+      - prod1
   workflow_dispatch:
 
 jobs:
@@ -28,12 +28,23 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r project/requirements.txt
+
+      - name: Cleaning testing files
+        run: |
+          cd project/
+          rm db.sqlite3
+          rm .env
+          cd ..
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: |
+          cd project/
+          zip release.zip ./* -r
+          cd ..
+          mv project/release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
@@ -65,14 +76,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_78540C39988C4FB29C5667B915BA352D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_35C4E76DED3344E4A8D0739B6514E663 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_ABB7AEE4007D487C836380C2E9BF5DC9 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_02D773380D904E7BA13A496C5D857125 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1C58037BFE5A41F287329A1607646319 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_91593F49AABE4C36AB1FB487C9CA04FD }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'Mandala-da-Terra-webapp'
+          app-name: 'mandaladaterradeploy'
           slot-name: 'Production'
           
