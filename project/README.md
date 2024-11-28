@@ -80,7 +80,7 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 <img src="https://img.shields.io/badge/css3-F46036?style=for-the-badge&logo=css3&logoColor=white"/>
 <img src="https://img.shields.io/badge/Microsoft_Azure-3C3744?style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
 
-##  🛠️ Ferramentas
+##  🛠️ Ferramentas (links das que usamos no projeto)
 
 <a href="https://raulvnc.atlassian.net/jira/software/projects/HIST/boards/67/backlog" target="_blank">
     <img src="https://img.shields.io/badge/Jira-F46036?style=for-the-badge&logo=Jira&logoColor=white" alt="Jira"/>
