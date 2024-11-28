@@ -1,0 +1,116 @@
+
+body {
+    background-color: #d2d2d6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 20rem;
+    margin: auto;
+}
+
+
+.entre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.divisor {
+    flex: 1;
+    margin: 0 1rem;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.botao-divisor {
+    color: #4b5563;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.seta,
+.menu {
+    font-size: 1.5rem;
+}
+
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d1d5db;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.texto-opcao {
+    color: #4b5563;
+}
+
+
+.botao-alternancia {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.botao-alternancia input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.alternador {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.alternador:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .alternador {
+    background-color: #4fd1c5;
+}
+
+input:checked + .alternador:before {
+    transform: translateX(14px);
+}
+
+.redondo {
+    border-radius: 34px;
+}
+
+.redondo:before {
+    border-radius: 50%;
+}

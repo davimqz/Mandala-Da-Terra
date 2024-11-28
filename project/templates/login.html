@@ -1,31 +1,56 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
+
 <body>
-    <div class="container">
-        <div class="login-box">
-            <h2>Faça o seu login</h2>
-            <form method="POST">
-                {% csrf_token %}
-                <label for="cpf">Digite seu CPF</label>
-                <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required>
+    <div class="login-container">
+        <form method="POST" class="login-form">
+            {% csrf_token %}
 
-                <label for="senha">Digite sua senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-
-                <button type="submit" class="botao">Entrar</button>
-                <a href="{% url 'cadastro' %}"><button type="button" class="botao">Fazer Cadastro</button></a>
-                <a href="#" class="esqueci-senha">Esqueci minha senha</a>
-            </form>
-            {% for message in messages %}
-            <p class="{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</p>
-            {% endfor %}
-        </div>
+            <div class="logo-container">
+                <img alt="" src="{% static 'img/Logo.png'%}" class="logo"/>
+            </div>
+            
+            <h1 class="form-title">
+                Faça o seu login
+            </h1>
+            <div class="input-group">
+                <label for="email" class="input-label">Email</label>
+                <input id="email" name="email" type="email" placeholder="Digite seu Email" class="input-field"/>
+            </div>
+            
+            <div class="input-group">
+                <label for="password" class="input-label">Senha</label>
+                <input id="password" name="password" type="password" placeholder="Digite uma senha" class="input-field"/>
+                
+                <p class="forgot-password">
+                    <a href="#" class="forgot-password-link">
+                        Esqueci a senha
+                    </a>
+                </p>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="submit-btn">
+                    Entrar
+                </button>
+                
+                <a href="{% url 'cadastro' %}">
+                    <button type="button" class="signup-btn">
+                        Fazer cadastro
+                    </button>
+                </a>
+            </div>
+        </form>
+        {% for message in messages %}
+        <p class="message {{ message.tags }}">{{ message }}</p>
+        {% endfor %}
     </div>
 </body>
 </html>

@@ -11,6 +11,12 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 |     Data de plantio/ Data de colheita   |    ✔️     |
 |     Previsão climática em tempo real    |    ✔️     |
 |     Diagramação dos tipos de cultura    |    ✔️     |
+|     Tamanho de horta ideal              |    ✔️     |
+|     Informações sobre pragas do solo    |    ✔️     |
+|     Plantas companheiras                |    ✔️     |
+|     Separação por ruas                  |    ✔️     |
+|     Espaço para anotações               |    ✔️     |
+
 
 ## ⚙️ Funcionalidades
 
@@ -18,6 +24,12 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 - **Data de Plantio/ Data de Colheita** -  Viabiliza a noção temporal.
 - **Previsão Climática em Tempo Real** - Permite que o nosso app informe, com precisão, a previsão climática, de acordo com a localização do usuário em tempo real
 - **Diagramação Dos Tipos de Culturas** - Oferece, de modo simplificado, a organização conceitual, a textual e, sobretudo, a visual de todos as culturas cadastradas
+- **Usuário ter conhecimento das pragas do solo** -  Informa sobre pragas comuns do solo e como identificá-las para cada tipo de cultura.
+- **Separação por ruas** - Permite organizar as culturas agrícolas por ruas, facilitando o planejamento e manejo da produção.
+- **Espaço para anotações** - Área dedicada para o usuário registrar informações e observações da produção.
+- **Tamanho de horta ideal** - Sugere o tamanho da horta com base no número de pessoas beneficiadas.
+- **Culturas companheiras** - Exibe plantas compatíveis ao inserir uma cultura, ajudando no consórcio agrícola.
+
 
 # Status Report 1
 ### Histórias de Usuário
@@ -68,16 +80,30 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 <img src="https://img.shields.io/badge/css3-F46036?style=for-the-badge&logo=css3&logoColor=white"/>
 <img src="https://img.shields.io/badge/Microsoft_Azure-3C3744?style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
 
-##  🛠️ Ferramentas
+##  🛠️ Ferramentas (links das que usamos no projeto)
+
+<a href="https://raulvnc.atlassian.net/jira/software/projects/HIST/boards/67/backlog" target="_blank">
+    <img src="https://img.shields.io/badge/Jira-F46036?style=for-the-badge&logo=Jira&logoColor=white" alt="Jira"/>
+</a>
+
+<a href="https://sites.google.com/d/1bX6TBLN_zLcytyvEuXLa4_GFjpNM7KtL/p/16Soj2u6ahfwzWqNcLNtQMkIaciUiDRO1/edit?pli=1" target="_blank">
+    <img src="https://img.shields.io/badge/Google%20Sites-4285F4?style=for-the-badge&logo=google-sites&logoColor=white" alt="Google Sites"/>
+</a>
+<a href="https://miro.com/app/board/uXjVKnF6fYk=/?share_link_id=416741256332" target="_blank">
+    <img src="https://img.shields.io/badge/Miro-FFD02F?style=for-the-badge&logo=Miro&logoColor=050038" alt="Miro"/>
+</a>
 
 <a href="">
-<img src="https://img.shields.io/badge/Jira-F46036?style=for-the-badge&logo=Jira&logoColor=white"/>
+
 </a>
-<img src="https://img.shields.io/badge/figma-3C3744?style=for-the-badge&logo=figma&logoColor=white"/>
-<a href="">
-<img src="https://img.shields.io/badge/YOUTUBE-F46036?style=for-the-badge&logo=youtube&logoColor=white"/>
+<a href="https://www.notion.so/G11-Projeto-ll-3d806a265dc54458967775d435aa8bab" target="_blank">
+    <img src="https://img.shields.io/badge/Notion-3C3744?style=for-the-badge&logo=notion&logoColor=white" alt="Notion"/>
 </a>
-<img src="https://img.shields.io/badge/Notion-3C3744?style=for-the-badge&logo=notion&logoColor=white"/>
+<a href="https://www.figma.com/design/P2xUkULcDTnbgSQGM44Ush/Mandala-da-Terra?node-id=0-1&node-type=canvas&t=WSVP8BFsjMvTomPg-0" target="_blank">
+    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+</a>
+
+
 
 ## 👥 Creditos
 

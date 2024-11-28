@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Web</title>
+    <link rel="stylesheet" href='{% static '/css/meu_perfil.css'%}?{% now "U"
+    %}'>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="fundo_pagina">
+    <div class="caixa_principal">
+      <header class="cabecalho">
+        <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
+        <h1 class="titulo">Configurações</h1>
+      </header>
+
+      <main class="conteudo">
+        <div class="card">
+          <div class="botoes_acao">
+
+            <a href="">
+                <form action="{% url 'notas:anotar' %}" method="post">
+                    {% csrf_token %}
+                    <button class="botao">
+                        <i class="fas fa-book icone_botao"></i> Anotações
+                    </button>
+                </form>
+            </a>
+
+            <div class="tamanho-horta">
+              <h2>Calcule o tamanho ideal da horta:</h2>
+              <label for="numero1">Deseja produzir para quantas pessoas?</label>
+              <input class="digite"
+                class="tamanho-horta-input"
+                type="number"
+                id="numero1"
+                name="numero1"
+                placeholder="Digite aqui"
+                required
+              />
+              <label id="label_resultado" for="resultado"
+                >Tamanho recomendado (m²):</label
+              >
+              <input
+                type="text"
+                id="resultado"
+                name="resultado"
+                readonly
+              />
+              <button
+                type="button"
+                class="tamanho-horta-btn"
+                onclick="multiplicar()"
+              >
+                Calcular
+              </button>
+
+                          <a href="">
+              <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button class="botao">
+                  <i class="fas fa-sign-out-alt icone_botao"></i> Sair do app
+                </button>
+              </form>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="rodape">
+        <a href="{% url 'crops:pesquisar_cultura' %}"
+          ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+        ></a>
+        <a href="{% url 'crops:task_create'%}"
+          ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+        ></a>
+        <a href="{% url 'crops:home'%}"
+          ><button class="icone_rodape"><i class="fas fa-home"></i></button
+        ></a>
+        <a href="{% url 'crops:praga' %}"
+          ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+        ></a>
+        <a href="{% url 'notas:meu_perfil'%}"
+          ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+        ></a>
+      </footer>
+    </div>
+  </body>
+  <style>
+    /* Inicialmente, o campo de resultado, o label e a unidade ficam ocultos */
+    #label_resultado,
+    #resultado {
+      display: none;
+    }
+  </style>
+  <script>
+    function multiplicar() {
+      var num1 = parseFloat(document.getElementById("numero1").value);
+
+      // Verifica se o número é negativo
+      if (isNaN(num1) || num1 < 0) {
+        alert("Por favor, insira um número positivo!");
+        document.getElementById("numero1").value = ""; // Limpa o campo
+        document.getElementById("resultado").value = ""; // Limpa o resultado
+        document.getElementById("label_resultado").style.display = "none"; // Esconde o label
+        document.getElementById("resultado").style.display = "none"; // Esconde o resultado
+        return; // Impede a multiplicação
+      }
+
+      var num2 = 10; // Número fixo 10
+      var resultado = num1 * num2;
+
+      // Exibe o label, o campo de resultado e a unidade
+      document.getElementById("resultado").value = resultado;
+      document.getElementById("label_resultado").style.display = "inline"; // Exibe o label
+      document.getElementById("resultado").style.display = "inline"; // Exibe o campo de resultado
+    }
+  </script>
+</html>

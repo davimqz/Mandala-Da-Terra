@@ -1,0 +1,184 @@
+/* Corpo e fonte padrão */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d2d2d6;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.titulo {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.caixa_principal {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #E0E0E0;
+    border-radius: 0.5rem;
+}
+
+.conteudo {
+    padding: 1rem;
+}
+
+/* Cartão */
+.cartao {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-cartao {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.imagem-cartao {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+.texto-cartao {
+    font-size: 0.875rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.botao-cartao {
+    background-color: #87C15A;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.botao-cartao .icone-mais {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #065f46;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icone_rodape {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* Cartão */
+.cartao {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.cartao-info {
+    background-color: #87C15A;
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-cartao-info {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.titulo-cartao {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+.imagem-cartao {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+.texto-cartao {
+    font-size: 0.875rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.botao-cartao {
+    background-color: #87C15A;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.botao-cartao .icone-mais {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #25460B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icone_rodape {
+    color: #ffffff;
+    font-size: 1.5rem;
+}

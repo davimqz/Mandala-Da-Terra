@@ -9,8 +9,9 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.contas.urls')),
-    path('culturas/', include('apps.culturas.urls')),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),  # Adicione esta linha
+    path('crops/', include('apps.crops.urls')),
+    path('notas/', include('apps.notas.urls')),
+    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),  # Adicione esta linha
     
 ]
 

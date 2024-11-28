@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Web</title>
+    <link rel="stylesheet" href='{% static '/css/task_edit.css'%}?{% now "U" %}'>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="fundo_pagina">
+    <div class="caixa_principal">
+      <header class="cabecalho">
+        <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
+        <h1 class="titulo">Editando Cultura</h1>
+      </header>
+
+      <main class="conteudo">
+        <form method="POST">
+            {% csrf_token %}
+            <label for="title-form">Cultura:</label>
+            <select class="opcoes" name="title" id="opcoes" required>
+                <option value="Batata🥔">🥔 Batata</option>
+                <option value="Tomate🍅">🍅 Tomate</option>
+                <option value="Cenoura🥕">🥕 Cenoura</option>
+                <option value="Alface🥬">🥬 Alface</option>
+                <option value="Pepino🥒">🥒 Pepino</option>
+                <option value="Beterraba🍆">🍆 Beterraba</option>
+                <option value="Pimentão🫑">🫑 Pimentão</option>
+                <option value="Brócolis🥦">🥦 Brócolis</option>
+                <option value="Milho🌽">🌽 Milho</option>
+            </select>
+            <br>
+            <label for="data_plantio">Data de Plantio:</label>
+            <input type="date" name="data_plantio" id="data_plantio"><br>
+
+            <label for="data_colheita">Nova data de Colheita:</label>
+            <input type="date" name="data_colheita" id="data_colheita" readonly><br>
+
+            <label for="description">Descrição:</label>
+            <textarea class="notas" name="description" id="description">{{ task.description }}</textarea><br>
+
+         <div class="buttons-add">
+            <button type="submit" class="botao_adicionar">Salvar</button>
+            <a class="botao_adicionar" href="{% url 'crops:home' %}">Voltar</a>
+        </div>
+        </form>
+      </main>
+      
+      <footer class="rodape">
+        <a href="{% url 'crops:pesquisar_cultura' %}"
+          ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+        ></a>
+        <a href="{% url 'crops:task_create'%}"
+          ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+        ></a>
+        <a href="{% url 'crops:home'%}"
+          ><button class="icone_rodape"><i class="fas fa-home"></i></button
+        ></a>
+        <a href="{% url 'crops:praga' %}"
+          ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+        ></a>
+        <a href="{% url 'notas:meu_perfil'%}"
+          ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+        ></a>
+      </footer>
+    </div>
+
+    <script>
+        const culturas = {
+            "Batata🥔": 120,
+            "Tomate🍅": 90,
+            "Cenoura🥕": 70,
+            "Alface🥬": 40,
+            "Pepino🥒": 60,
+            "Beterraba🍆": 85,
+            "Pimentão🫑": 120,
+            "Brócolis🥦": 80,
+            "Milho🌽": 100
+        };
+
+        const opcoes = document.getElementById('opcoes');
+        const dataPlantio = document.getElementById('data_plantio');
+        const dataColheita = document.getElementById('data_colheita');
+
+        // Função para atualizar a data de colheita
+        function atualizarDataColheita() {
+            const culturaSelecionada = opcoes.value;
+            const tempoColheitaDias = culturas[culturaSelecionada];
+
+            if (dataPlantio.value) {
+                const dataPlantioDate = new Date(dataPlantio.value);
+                dataPlantioDate.setDate(dataPlantioDate.getDate() + tempoColheitaDias); // Adiciona os dias de colheita
+
+                // Atualiza a data de colheita no input
+                const dia = String(dataPlantioDate.getDate()).padStart(2, '0');
+                const mes = String(dataPlantioDate.getMonth() + 1).padStart(2, '0');
+                const ano = dataPlantioDate.getFullYear();
+                
+                dataColheita.value = `${ano}-${mes}-${dia}`;
+            }
+        }
+
+        // Adiciona o listener de mudança no campo de data de plantio
+        opcoes.addEventListener('change', atualizarDataColheita);
+
+        // Caso a data de plantio já esteja preenchida, calcula a data de colheita inicialmente
+        dataPlantio.addEventListener('change', atualizarDataColheita);
+
+        // Chama a função ao carregar a página caso a data de plantio já esteja preenchida
+        if (dataPlantio.value) {
+            atualizarDataColheita();
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Web</title>
+    <link rel="stylesheet" href='{% static '/css/task_create.css'%}?{% now "U" %}'>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+<body class="fundo_pagina">
+    <div class="caixa_principal">
+        <header class="cabecalho">
+            <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
+            <h1 class="titulo">Pesquisar Companheiras</h1>
+        </header>
+        
+        <main class="conteudo">
+            <form method="get" action="{% url 'crops:pesquisar_cultura' %}">
+                <label for="opcoes">Escolha uma cultura:</label>
+                <select name="title" id="opcoes" required>
+                    <option value="" disabled selected>Selecione uma cultura</option>
+                    {% for cultura in culturas %}
+                        <option value="{{ cultura.nome }}">{{ cultura.nome }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="botao_adicionar"><i class="fas fa-search"></i>‎ Pesquisar</button><br>
+            </form>
+
+            {% if plantas_companheiras %}
+                <h2 style="color: #25460B; font-weight: bold;">Plantas Companheiras para {{ plantas_companheiras.first.cultura.nome }}:</h2>
+                <ul>
+                    {% for planta in plantas_companheiras %}
+                        <li>{{ planta.nome }} - {{ planta.descricao }}</li>
+                    {% endfor %}
+                </ul>
+            {% elif plantas_companheiras is not None %}
+                <p>Não foram encontradas plantas companheiras para essa cultura.</p>
+            {% endif %}
+        </main>
+        
+        
+        <footer class="rodape">
+            <a href="{% url 'crops:pesquisar_cultura' %}"
+              ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+            ></a>
+            <a href="{% url 'crops:task_create'%}"
+              ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+            ></a>
+            <a href="{% url 'crops:home'%}"
+              ><button class="icone_rodape"><i class="fas fa-home"></i></button
+            ></a>
+            <a href="{% url 'crops:praga' %}"
+              ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+            ></a>
+            <a href="{% url 'notas:meu_perfil'%}"
+              ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+            ></a>
+          </footer>
+    </div>
+</body>

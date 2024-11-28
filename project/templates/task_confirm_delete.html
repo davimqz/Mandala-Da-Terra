@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deletar Tarefa</title>
+</head>
+<body>
+    <h1>Tem certeza que deseja deletar "{{ task.title }}"?</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Deletar</button>
+    </form>
+    <a href="{% url 'crops:task_list' %}">Cancelar</a>
+</body>
+</html>

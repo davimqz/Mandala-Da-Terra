@@ -1,40 +1,63 @@
-<html lang="pt-br">
+<!DOCTYPE html>
 {% load static %}
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/cadastro.css' %}">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href='{% static '/css/cadastro.css'%}?{% now "U" %}'>
 </head>
 
 <body>
-    <div class="container">
-        <div class="login-box">
-            <h2>Cadastro</h2>
-            <form method="POST">
-                {% csrf_token %}
-
-                <label for="nome">Nome</label>
-                <input type="text" id="text" name="text" placeholder="Digite seu nome" required>
-
-                <label for="date">Data de nascimento</label>
-                <input type="date" id="date" name="date" required>
-
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required>
-
-                <label for="senha">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-
-                <button type="submit" class="botao">Cadastrar</button>
-            </form>
-            <p>Já possui uma conta? <a href="{% url 'login' %}">Faça login</a></p>
-            {% for message in messages %}
-            <p class="{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</p>
-            {% endfor %}
+    <div class="form-container">
+        
+        <div class="logo-container">
+            <img src="{% static 'img/Logo.png'%}" alt="Logo decorativa" class="logo">
         </div>
+        
+        <h2 class="form-title">Realize seu cadastro</h2>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="form-field">
+                <label for="nome" class="label">Nome:</label>
+                <input type="text" id="nome" name="nome" class="input" required placeholder="Digite seu nome">
+            </div>
+            
+            <div class="form-field">
+                <label class="label">Data de Nascimento</label>
+                <div class="date-input-group">
+                    <input type="text" class="input date-input" placeholder="DD" maxlength="2">
+                    <span class="separator">/</span>
+                    <input type="text" class="input date-input" placeholder="MM" maxlength="2">
+                    <span class="separator">/</span>
+                    <input type="text" class="input date-input" placeholder="AAAA" maxlength="4">
+                </div>
+            </div>
+            
+            <div class="form-field">
+                <label for="email" class="label">Email</label>
+                <input type="email" id="email" name="email" class="input" required placeholder="Digite seu Email">
+            </div>
+            
+            <div class="form-field">
+                <label for="telefone" class="label">Número de Telefone</label>
+                <input type="tel" id="telefone" name="telefone" class="input" required placeholder="Digite seu número de telefone">
+            </div>
+            
+            <div class="form-field">
+                <label for="password" class="label">Senha</label>
+                <input type="password" id="password" name="password" class="input" required placeholder="Digite uma senha">
+            </div>
+            
+            <button type="submit" class="submit-button">Cadastre-se</button>
+        
+        </form>
+        <p class="login-link">Já possui uma conta? <a href="{% url 'login' %}">Faça login</a></p>
+        
+        {% for message in messages %}
+        <p class="message {{ message.tags }}">{{ message }}</p>
+        {% endfor %}
     </div>
 </body>
-
 </html>

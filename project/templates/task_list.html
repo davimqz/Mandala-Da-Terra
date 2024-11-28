@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarefas</title>
+</head>
+<body>
+    <h1>Tarefas</h1>
+    <a href="{% url 'crops:task_create' %}">Criar nova tarefa</a>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.title }} - 
+                <a href="{% url 'crops:task_edit' task.pk %}">Editar</a> | 
+                <a href="{% url 'crops:task_delete' task.pk %}">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

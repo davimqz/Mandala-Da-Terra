@@ -1,18 +1,125 @@
-<html lang="pt-BR">
+<!DOCTYPE html>
 {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Registro</title>
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Web</title>
     <link rel="stylesheet" href='{% static '/css/home.css'%}?{% now "U" %}'>
-</head>
-<body>
-    <div class="container">
-        <img src="{% static 'img/logo.png' %}" alt="imagem da logo" style="width: 150px; height: auto; padding: 15px;">
-        <a href="{% url 'saf' %}"><button class="botao">SAF</button></a>
-        <a href="{% url 'horta' %}"><button class="botao">Horta</button></a>
-        <br>
-        <a href="{% url 'add_plantacao' %}"><button class="botao2">Adicionar plantação</button></a>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="fundo_pagina">
+    <div class="caixa_principal">
+      <header class="cabecalho">
+        <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
+        <h1 class="titulo">Olá, {{ request.user.nome }}!</h1>
+      </header>
+
+      <main class="conteudo">
+        <section class="clima">
+          <div class="info_clima">
+            <p class="localizacao">
+              <i class="fas fa-map-marker-alt"></i><p>Carpina/PE - Brasil</p>
+            </p>
+            <p class="temperatura">{{ temperatura|floatformat:0 }}°C</p>
+          </div>
+          {% if icon_url %}
+          <img class="previsaoimg" src="{{ icon_url }}" alt="Ícone do clima" />
+          {% endif %}
+        </section>
+
+        <a href="{% url 'crops:task_create' %}"
+          ><button class="botao_adicionar">
+            Adicionar <i class="fas fa-plus"></i></button
+        ></a>
+
+        <section class="tarefas">
+          {% for task in tasks %}
+          <div class="task-card" id="task-{{ task.id }}">
+            <div class="crop-card">
+              <h3 class="title-rua">{{ task.rua }}</h3>
+              <h3 class="title-card">{{ task.title }}</h3>
+              <h2 class="title-notes">
+                <p>Descrição: {{ task.description }}</p>
+              </h2>
+              <!-- {% if task.completed %}
+              <p class="status_concluida">Status: Concluída ✅</p>
+              {% else %}
+              <p class="status_pendente">Status: Pendente ⏳</p> -->
+              <!-- {% endif %} -->
+              <p class="status_pendente">Data de Plantio: {{ task.data_plantio|date:"d/m/Y" }}</p>
+              <p class="status_pendente">Data de Colheita: {{ task.data_colheita|date:"d/m/Y" }}</p>
+
+              <a style="background-color: rgb(255, 255, 255); color: black; border: 0.5px solid green;" class="btn-edit" href="{% url 'crops:task_edit' task.pk %}"
+                >Editar</a
+              >
+              <button class="btn-remove" data-task-id="{{ task.id }}">
+                Marcar como colhido
+              </button>
+            </div>
+          </div>
+          {% empty %}
+          <p class="notfound">Não há plantações cadastradas no momento.</p>
+          {% endfor %}
+        </section>
+      </main>
+
+      <footer class="rodape">
+        <a href="{% url 'crops:pesquisar_cultura' %}"
+          ><button class="icone_rodape"><i class="fas fa-heart"></i></button
+        ></a>
+        <a href="{% url 'crops:task_create'%}"
+          ><button class="icone_rodape"><i class="fas fa-plus"></i></button
+        ></a>
+        <a href="{% url 'crops:home'%}"
+          ><button class="icone_rodape"><i class="fas fa-home"></i></button
+        ></a>
+        <a href="{% url 'crops:praga' %}"
+          ><button class="icone_rodape"><i class="fas fa-bug"></i></button
+        ></a>
+        <a href="{% url 'notas:meu_perfil'%}"
+          ><button class="icone_rodape"><i class="fas fa-cog"></i></button
+        ></a>
+      </footer>
     </div>
-</body>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Adiciona evento de clique aos botões de remoção
+      document.querySelectorAll(".btn-remove").forEach((button) => {
+        button.addEventListener("click", function () {
+          const taskId = this.getAttribute("data-task-id"); // Obtém o ID da tarefa
+          const taskCard = document.getElementById(`task-${taskId}`); // Seleciona o card correspondente
+
+          // Envia requisição de remoção
+          fetch(`/crops/task/${taskId}/delete/`, {
+            method: "POST",
+            headers: {
+              "X-CSRFToken": "{{ csrf_token }}", // Insere o CSRF Token
+              "Content-Type": "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                taskCard.remove(); // Remove o card da tarefa na tela
+              } else {
+                alert("Erro ao tentar remover a tarefa.");
+              }
+            })
+            .catch((error) => {
+              console.error("Erro:", error);
+              alert("Erro ao tentar remover a tarefa.");
+            });
+        });
+      });
+    });
+  </script>
 </html>

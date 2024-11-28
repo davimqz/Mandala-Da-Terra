@@ -1,0 +1,12 @@
+<!-- detalhes_cultura.html -->
+<h1>{{ cultura.nome }}</h1>
+<p>{{ cultura.descricao }}</p>
+
+<h2>Plantas Companheiras:</h2>
+<ul>
+    {% for companheira in companheiras %}
+        <li>{{ companheira.nome }} - {{ companheira.descricao }}</li>
+    {% empty %}
+        <li>Não há plantas companheiras cadastradas para esta cultura.</li>
+    {% endfor %}
+</ul>
