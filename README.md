@@ -83,7 +83,7 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 ![H1](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%201.png?raw=true)
 
-- <strong>H2 - Saber a previsão do tempo </strong>  <a href="https://youtu.be/2T6UJirDyXM?si=7i7iYNyHNQujRz-Z" target="_blank">
+- <strong>H2 - Saber a previsão do tempo </strong> 
        <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>
 
