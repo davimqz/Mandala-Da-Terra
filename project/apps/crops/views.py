@@ -72,6 +72,18 @@ def task_create(request):
         completed = 'completed' in request.POST
         data_plantio_str = request.POST.get('data_plantio')  # Data de plantio do formulário
 
+                
+        if not title:
+            return render(request, 'task_create.html', {'error': 'Por favor, selecione uma cultura'})
+        if not rua:
+            return render(request, 'task_create.html', {'error': 'Por favor, selecione uma rua'})
+        if not data_plantio_str and not description:
+            return render(request, 'task_create.html', {'error': 'Por favor, insira uma data de plantio e uma descrição'})
+        if not data_plantio_str:
+            return render(request, 'task_create.html', {'error': 'Por favor, insira uma data de plantio'})
+        if not description:
+            return render(request, 'task_create.html', {'error': 'Por favor, insira uma descrição'})
+
         # Converte a data de plantio para o formato correto
         if data_plantio_str:
             data_plantio = datetime.strptime(data_plantio_str, "%Y-%m-%d").date()
@@ -107,15 +119,30 @@ def task_edit(request, pk):
     task = get_object_or_404(Task, pk=pk)
     
     if request.method == 'POST':
-        task.title = request.POST.get('title')
-        task.description = request.POST.get('description')
+        # Obtém os dados do formulário
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        data_plantio = request.POST.get('data_plantio')
+        
+        # Verifica se os campos obrigatórios estão preenchidos
+        if not data_plantio and not description:
+            return render(request, 'task_edit.html', {'error': 'Por favor, insira uma data de plantio e uma descrição'})
+        if not description:
+            return render(request, 'task_edit.html', { 'error': 'Por favor, insira uma descrição'})
+        if not data_plantio:
+            return render(request, 'task_edit.html', {'task': task, 'error': 'Por favor, insira a data de plantio'})
+        
+        # Se ambos os campos forem válidos, salva as alterações
+        task.title = title
+        task.description = description
+        task.data_plantio = data_plantio
         task.completed = 'completed' in request.POST
         task.save()
-        return redirect(reverse('crops:home'))
 
+        # Redireciona para a página inicial após salvar
+        return redirect('crops:home')
     
     return render(request, 'task_edit.html', {'task': task})
- 
 
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404

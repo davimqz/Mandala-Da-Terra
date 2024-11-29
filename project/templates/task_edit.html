@@ -20,6 +20,11 @@
       <header class="cabecalho">
         <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
         <h1 class="titulo">Editando Cultura</h1>
+        {% if error %}
+          <div class="alert alert-danger">
+            <p>{{ error }}</p>
+          </div>
+        {% endif %}
       </header>
 
       <main class="conteudo">

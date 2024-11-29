@@ -20,6 +20,9 @@
       <header class="cabecalho">
         <img src="{% static 'img/logo.png'%}" alt="Logo" class="logo" />
         <h1 class="titulo">Adicionando Cultura</h1>
+        {% if error %}
+       <div class="error">{{ error }}</div>
+        {% endif %}
       </header>
 
       <main class="conteudo">
@@ -64,9 +67,7 @@
         </div>
          <label for="description">Descrição:</label>
         <textarea class="notas" name="description" id="description"></textarea>
-     <div class="buttons-add">
-        <button type="submit" class="botao_adicionar" >Criar Tarefa</button>
-        <a class="botao_adicionar" href="{% url 'crops:task_list' %}">Voltar</a>
+        <a class="botao_adicionar" href="{% url 'crops:home' %}">Voltar</a>
     </div>
     </form>
       </main>

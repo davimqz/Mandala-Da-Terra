@@ -20,6 +20,11 @@
       <header class="cabecalho">
         <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo" />
         <h1 class="titulo">Faça Anotações</h1>
+        {% if erro %}
+          <div class="alert alert-danger">
+            <p>{{ erro }}</p>
+          </div>
+        {% endif %}
       </header>
 
       <main class="conteudo">

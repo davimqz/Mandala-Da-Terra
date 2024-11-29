@@ -6,15 +6,23 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 def anotar(request):
     if request.method == 'POST':
-        conteudo = request.POST.get('conteudo', '').strip()  # Obtém e remove espaços extras
-        if conteudo:  # Verifica se o conteúdo não está vazio
-            Nota.objects.create(
-                usuario=request.user,  # Relaciona à conta do usuário logado
-                conteudo=conteudo
-            )
-            return redirect('notas:anotar')
+        conteudo = request.POST.get('conteudo', '').strip()  # Remove espaços extras
 
-    notas = Nota.objects.filter(usuario=request.user)
+        # Verifica se o conteúdo não está vazio
+        if not conteudo:
+            # Se o conteúdo estiver vazio, podemos passar uma mensagem de erro
+            return render(request, 'anotar.html', {'erro': 'O conteúdo da anotação não pode ser vazio.'})
+
+        # Se o conteúdo não estiver vazio, cria a nota
+        usuario = request.user if request.user.is_authenticated else None
+        Nota.objects.create(
+            usuario=usuario,
+            conteudo=conteudo
+        )
+        return redirect('notas:anotar')  # Redireciona para a página de anotar após a criação
+
+    # Se a requisição for GET, ou após um POST bem sucedido, exibe as notas
+    notas = Nota.objects.filter(usuario=request.user) if request.user.is_authenticated else []
     return render(request, 'anotar.html', {'notas': notas})
 
 

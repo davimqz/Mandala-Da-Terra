@@ -57,7 +57,7 @@
               <p class="status_pendente">Data de Plantio: {{ task.data_plantio|date:"d/m/Y" }}</p>
               <p class="status_pendente">Data de Colheita: {{ task.data_colheita|date:"d/m/Y" }}</p>
 
-              <a style="background-color: rgb(255, 255, 255); color: black; border: 0.5px solid green;" class="btn-edit" href="{% url 'crops:task_edit' task.pk %}"
+              <a class="btn-edit" href="{% url 'crops:task_edit' task.pk %}"
                 >Editar</a
               >
               <button class="btn-remove" data-task-id="{{ task.id }}">
