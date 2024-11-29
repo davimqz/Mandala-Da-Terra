@@ -87,7 +87,7 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 - <strong>H4 - Adicionar culturas </strong>
 
-![H4](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%204.png?raw=true)
+![H4](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historiaaddcult.png?raw=true)
 
 - <strong>H5 - Editar/ remover culturas </strong>
 
@@ -113,6 +113,11 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 ![H10](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%2010.png?raw=true)
 
+- <strong>Diagrama de Atividades</strong>
+![Diagrama de atividade (4)](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/diagrama2.png?raw=true)
+
+
+
 
 ## 📦 Tecnologias
 
@@ -124,6 +129,17 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 <img src="https://img.shields.io/badge/Microsoft_Azure-3C3744?style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
 
 ##  🛠️ Ferramentas (links das que usamos no projeto)
+- Board e backlog (JIRA)
+
+- Pesquisas (Notion)
+
+- Site do projeto (Google sites)
+
+- Protótipo (Figma)
+
+- Screencast da implementação (Youtube)
+
+- Organização das sprints (Miro)
 
 <a href="https://raulvnc.atlassian.net/jira/software/projects/HIST/boards/67/backlog" target="_blank">
     <img src="https://img.shields.io/badge/Jira-F46036?style=for-the-badge&logo=Jira&logoColor=white" alt="Jira"/>
@@ -144,6 +160,10 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 </a>
 <a href="https://www.figma.com/design/P2xUkULcDTnbgSQGM44Ush/Mandala-da-Terra?node-id=0-1&node-type=canvas&t=WSVP8BFsjMvTomPg-0" target="_blank">
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+</a>
+
+<a href="https://youtu.be/2T6UJirDyXM?si=7i7iYNyHNQujRz-Z" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>
 
 
