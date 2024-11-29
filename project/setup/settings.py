@@ -61,7 +61,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.contas',
-    'apps.culturas',
+    'apps.crops',
+    'apps.notas',
     "whitenoise.runserver_nostatic",
 ]
 
@@ -140,7 +141,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'apps', 'contas', 'static'),  # Caminho para os arquivos estáticos da aplicação
+    os.path.join(BASE_DIR, "static"),  # Caminho para os arquivos estáticos da aplicação
 ]
 
 
