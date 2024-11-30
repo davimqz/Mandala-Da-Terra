@@ -58,13 +58,13 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 - <strong>Backlog</strong>
 
-![Backlog](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/backlog.png?raw=true)
+![Backlog](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/backlog.png?raw=true)
 
 <br>
 
 - <strong>Board</strong>
 
-![Board](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/board.png?raw=true)
+![Board](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/board.png?raw=true)
 
 <br>
 
@@ -81,19 +81,19 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 
 
-![H1](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%201.png?raw=true)
+![H1](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%201.png?raw=true)
 
 - <strong>H2 - Saber a previsão do tempo </strong>  <a href="https://youtu.be/2T6UJirDyXM?si=7i7iYNyHNQujRz-Z" target="_blank">
        <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>
 
-![H2](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%202.png?raw=true)
+![H2](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%202.png?raw=true)
 
 - <strong>H3 - Saber o dia da colheita </strong>  <a href="https://www.youtube.com/watch?v=1C4pZPlO4yA" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>
 
-![H3](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%203.png?raw=true)
+![H3](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%203.png?raw=true)
 
 - <strong>H4 - Adicionar culturas </strong>  <a href="https://www.youtube.com/watch?v=9rjnwy_Et8Q" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
@@ -101,7 +101,7 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 
 
-![H4](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historiaaddcult.png?raw=true)
+![H4](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%204.png?raw=true)
 
 - <strong>H5 - Editar/ remover culturas </strong>  <a href="https://www.youtube.com/watch?v=Xfj7BOkiwYw" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
@@ -109,13 +109,13 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 
 
-![H5](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%205.png?raw=true)
+![H5](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%205.png?raw=true)
 
 - <strong>H6 - Espaço para anotações </strong>  <a href="https://youtu.be/2T6UJirDyXM?si=7i7iYNyHNQujRz-Z" target="_blank">
        <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>       
 
-![H6](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%206.png?raw=true)
+![H6](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%206.png?raw=true)
 
 - <strong>H7 - Editar/ remover anotações </strong> <a href="https://www.youtube.com/watch?v=w3rxjiDtXQc" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
@@ -123,30 +123,30 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 
 
-![H7](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%207.png?raw=true)
+![H7](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%207.png?raw=true)
 
 - <strong>H8 - Saber sobre pragas comuns no solo </strong>  <a href="https://youtu.be/7XBRaC0HsDU" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>
 
-![H8](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%208.png?raw=true)
+![H8](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%208.png?raw=true)
 
 - <strong>H9 - Pesquisar plantas companheiras de uma cultura </strong> <a href="https://www.youtube.com/watch?v=pD8CUxFZ6ok" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>
 
 
-![H9](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%209.png?raw=true)
+![H9](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%209.png?raw=true)
 
 - <strong>H10 - Saber o tamanho ideal da minha horta baseado no número de pessoas </strong>  <a href="https://youtu.be/2T6UJirDyXM?si=7i7iYNyHNQujRz-Z" target="_blank">
        <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>       
 
 
-![H10](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/historia%2010.png?raw=true)
+![H10](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%2010.png?raw=true)
 
 - <strong>Diagrama de Atividades</strong>
-![Diagrama de atividade (4)](https://github.com/davimqz/Mandala-Da-Terra/blob/gabriel/project/static/img/diagrama2.png?raw=true)
+![Diagrama de atividade (4)](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/diagrama2.png?raw=true)
 
 
 
