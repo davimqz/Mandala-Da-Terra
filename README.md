@@ -135,12 +135,13 @@ culturas agrícolas. O sistema oferece uma  interface simplificada, com o foco n
 
 ![H9](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%209.png?raw=true)
 
-- <strong>H10 - Saber o tamanho ideal da minha horta baseado no número de pessoas </strong>  <a href="https://youtu.be/2T6UJirDyXM?si=7i7iYNyHNQujRz-Z" target="_blank">
+- <strong>H10 - Saber o tamanho ideal da minha horta baseado no número de pessoas </strong>  <a href="https://youtu.be/ddJSII5C7po" target="_blank">
        <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
 </a>       
 
 
 ![H10](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/historia%2010.png?raw=true)
+
 
 - <strong>Diagrama de Atividades</strong>
 ![Diagrama de atividade (4)](https://github.com/davimqz/Mandala-Da-Terra/blob/main/contas/static/img/diagrama2.png?raw=true)
